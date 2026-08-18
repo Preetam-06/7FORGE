@@ -1,0 +1,1118 @@
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.section {
+  position: relative;
+
+  width: 100%;
+
+  padding: 150px 0 100px;
+
+  overflow: hidden;
+
+
+
+  color: #f5f5f2;
+
+  border-top:
+    1px solid
+    rgba(255, 243, 174, 0.16);
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+
+  height: 500px;
+
+  right: -250px;
+
+  bottom: -200px;
+
+  border-radius: 50%;
+
+  filter: blur(25px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    1250px,
+    calc(100% - 64px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.topLine {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 55px;
+
+  color: #656c76;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+.line {
+  width: 45px;
+
+  height: 1px;
+
+  background:
+    rgba(
+      255,
+      243,
+      174,
+      0.40
+    );
+}
+
+
+.topLine span:first-child {
+  color: #fff3ae;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 80px;
+
+  margin-bottom: 90px;
+}
+
+
+.headingArea {
+  max-width: 800px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+  margin: 0 0 20px;
+
+  color: #fff3ae;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.heading {
+  margin: 0;
+
+  color: #f5f5f2;
+
+  font-family:
+    var(--font-space-grotesk),
+    sans-serif;
+
+  font-size:
+    clamp(45px, 7vw, 68px);
+
+  line-height: 0.92;
+
+  letter-spacing: -5px;
+
+  font-weight: 600;
+}
+
+
+.heading span {
+  display: block;
+
+  color: #fff3ae;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro {
+  max-width: 700px;
+
+  margin-right: auto;
+  padding-left: 50px;
+
+  color: #858c96;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   CONTACT LAYOUT
+========================================================= */
+
+.contactLayout {
+  display: grid;
+
+  grid-template-columns:
+    0.75fr 1.25fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT INFORMATION
+========================================================= */
+
+.info {
+  min-height: 620px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding:
+    10px 0;
+}
+
+
+/* =========================================================
+   INFO BLOCK
+========================================================= */
+
+.infoBlock {
+  padding-bottom: 45px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+}
+
+
+.infoBlock + .infoBlock {
+  padding-top: 40px;
+}
+
+
+/* =========================================================
+   INFO LABEL
+========================================================= */
+
+.infoLabel {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #666d77;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+.services span {
+  position: relative;
+
+  padding-left: 20px;
+
+  color: #c2c5ca;
+
+  font-family:
+    var(--font-space-grotesk),
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+}
+
+
+.services span::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 50%;
+
+  width: 6px;
+
+  height: 1px;
+
+  background: #fff3ae;
+}
+
+
+/* =========================================================
+   INFO TEXT
+========================================================= */
+
+.infoText {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: #858c96;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   INFO FOOTER
+========================================================= */
+
+.infoFooter {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  color: #4f5660;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+.infoFooter span:first-child {
+  color: #fff3ae;
+}
+
+
+.smallLine {
+  width: 25px;
+  
+  height: 1px;
+
+  background:
+    rgba(
+      255,
+      243,
+      174,
+      0.30
+    );
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form {
+  position: relative;
+
+  padding: 38px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.09
+    );
+
+  border-radius: 22px;
+
+  background:
+    rgba(
+      18,
+      22,
+      28,
+      0.82
+    );
+
+  box-shadow:
+    0 30px 80px
+    rgba(
+      0,
+      0,
+      0,
+      0.30
+    );
+
+  backdrop-filter:
+    blur(15px);
+
+  -webkit-backdrop-filter:
+    blur(15px);
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.formHeader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 24px;
+
+  margin-bottom: 5px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+
+  color: #5f6670;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+
+.formHeader span:last-child {
+  color: #fff3ae;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  padding: 22px 0;
+
+  border-bottom:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+}
+
+
+.field label {
+  color: #777e88;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #f5f5f2;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  transition:
+    color 200ms ease;
+}
+
+
+.field input {
+  height: 28px;
+}
+
+
+.field textarea {
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #4f5660;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.field select {
+  height: 30px;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  background:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #777e88 50%
+    )
+    calc(100% - 8px)
+    50% / 5px 5px no-repeat,
+
+    linear-gradient(
+      135deg,
+      #777e88 50%,
+      transparent 50%
+    )
+    calc(100% - 4px)
+    50% / 5px 5px no-repeat;
+}
+
+
+.field select option {
+  background: #15191f;
+
+  color: #f5f5f2;
+}
+
+
+/* =========================================================
+   FIELD FOCUS
+========================================================= */
+
+.field:focus-within label {
+  color: #fff3ae;
+}
+
+
+.field:focus-within {
+  border-bottom-color:
+    rgba(
+      255,
+      243,
+      174,
+      0.30
+    );
+}
+
+
+/* =========================================================
+   FORM BOTTOM
+========================================================= */
+
+.formBottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 30px;
+}
+
+
+.formBottom p {
+  max-width: 220px;
+
+  margin: 0;
+
+  color: #5f6670;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.submitButton {
+  min-height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  padding:
+    0 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #fff3ae;
+
+  color: #101318;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition:
+    transform 200ms ease,
+    background 200ms ease,
+    box-shadow 200ms ease;
+}
+
+
+.submitButton span {
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+
+.submitButton:hover {
+  transform:
+    translateY(-2px);
+
+  background: #fff7c9;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      255,
+      243,
+      174,
+      0.12
+    );
+}
+
+
+.submitButton:active {
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   SUCCESS STATE
+========================================================= */
+
+.success {
+  min-height: 550px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+}
+
+
+.successNumber {
+  margin-bottom: 20px;
+
+  color: #fff3ae;
+
+  font-family:
+    var(--font-space-grotesk),
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+.success h3 {
+  margin: 0;
+
+  color: #f5f5f2;
+
+  font-family:
+    var(--font-space-grotesk),
+    sans-serif;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+.success p {
+  max-width: 450px;
+
+  margin: 22px 0 30px;
+
+  color: #858c96;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+.resetButton {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #fff3ae;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.bottomLine {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 90px;
+
+  color: #555c66;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+.bottomLine span:last-child {
+  color: #fff3ae;
+}
+
+
+.bottomGoldLine {
+  width: 45px;
+
+  height: 1px;
+
+  background:
+    rgba(
+      255,
+      243,
+      174,
+      0.40
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .section {
+    padding: 120px 0 90px;
+  }
+
+
+  .header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 60px;
+  }
+
+
+  .contactLayout {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  .info {
+    min-height: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 35px;
+  }
+
+
+  .infoFooter {
+    grid-column:
+      1 / -1;
+  }
+
+
+  .infoBlock + .infoBlock {
+    padding-top: 0;
+  }
+
+
+  .form {
+    padding: 30px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 90px 0 70px;
+  }
+
+
+  .container {
+    width:
+      calc(100% - 32px);
+  }
+
+
+  .topLine {
+    margin-bottom: 40px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .line {
+    width: 30px;
+  }
+
+
+  .heading {
+    font-size:
+      clamp(
+        43px,
+        12vw,
+        58px
+      );
+
+    letter-spacing: -3px;
+  }
+
+
+  .intro {
+    font-size: 13px;
+  }
+
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+
+  .contactLayout {
+    gap: 45px;
+  }
+
+
+  .info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+  }
+
+
+  .infoBlock {
+    padding-bottom: 30px;
+  }
+
+
+  .infoBlock + .infoBlock {
+    padding-top: 30px;
+  }
+
+
+  .infoText {
+    font-size: 12px;
+  }
+
+
+  .services span {
+    font-size: 14px;
+  }
+
+
+  .infoFooter {
+    padding-top: 30px;
+  }
+
+
+  .form {
+    padding: 22px;
+
+    border-radius: 18px;
+  }
+
+
+  .formHeader {
+    padding-bottom: 20px;
+  }
+
+
+  .field {
+    padding: 19px 0;
+  }
+
+
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 13px;
+  }
+
+
+  .formBottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+
+  .formBottom p {
+    max-width: 100%;
+  }
+
+
+  .submitButton {
+    width: 100%;
+  }
+
+
+  .success {
+    min-height: 420px;
+  }
+
+
+  .success h3 {
+    font-size: 40px;
+  }
+
+
+  .bottomLine {
+    margin-top: 60px;
+
+    flex-wrap: wrap;
+
+    font-size: 6px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .bottomGoldLine {
+    width: 25px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .submitButton,
+  .field input,
+  .field select,
+  .field textarea {
+    transition: none;
+  }
+}

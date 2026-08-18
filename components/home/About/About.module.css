@@ -1,0 +1,522 @@
+/* =========================================
+   ABOUT
+========================================= */
+
+.section {
+  position: relative;
+
+  width: 100%;
+
+  padding: 120px 0 125px;
+
+  overflow: hidden;
+
+  color: #f5f5f2;
+
+  border-top:
+    1px solid
+    var(--forge-ivory);
+
+  box-shadow:
+    0 0 20px
+    rgba(
+      255,
+      196,
+      77,
+      0.45
+    );
+}
+
+
+/* =========================================
+   AMBIENT LIGHT
+========================================= */
+
+.section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 350px;
+
+  right: -250px;
+  top: 120px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(
+        255,
+        243,
+        174,
+        0.04
+      ),
+      transparent 70%
+    );
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      1200px,
+      calc(100% - 64px)
+    );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP LABEL
+========================================= */
+
+.topLine {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 48px;
+
+  color: #656c76;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.topLine span:first-child {
+  color: #fff3ae;
+}
+
+.line {
+  width: 35px;
+  height: 1px;
+
+  background:
+    rgba(
+      255,
+      243,
+      174,
+      0.4
+    );
+}
+
+
+/* =========================================
+   COMPANY INTRO
+========================================= */
+
+.companyIntro {
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    0.85fr;
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 75px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.eyebrow {
+  margin: 0 0 12px;
+
+  color: #fff3ae;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.headingArea {
+  max-width: 650px;
+}
+
+.heading {
+  margin: 0;
+
+  color: #f5f5f2;
+
+  font-family:
+    var(--font-space-grotesk),
+    sans-serif;
+
+  font-size:
+    clamp(
+      44px,
+      5.5vw,
+      65px
+    );
+
+  line-height: 0.96;
+
+  letter-spacing: -3.5px;
+
+  font-weight: 600;
+}
+
+.heading span {
+  display: block;
+
+  color: #fff3ae;
+}
+
+
+/* =========================================
+   COMPANY TEXT
+========================================= */
+
+.companyText {
+  max-width: 440px;
+}
+
+.companyText p {
+  margin: 0;
+
+  color: #858c96;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.companyText p + p {
+  margin-top: 14px;
+}
+
+
+/* =========================================
+   PRINCIPLES
+========================================= */
+
+.principles {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+}
+
+.principle {
+  position: relative;
+
+  min-height: 190px;
+
+  padding:
+    30px
+    28px
+    32px;
+}
+
+.principle + .principle {
+  border-left:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+}
+
+.principle > span {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #fff3ae;
+
+  font-family:
+    var(--font-space-grotesk),
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.principle h3 {
+  margin: 0 0 8px;
+
+  color: #f5f5f2;
+
+  font-family:
+    var(--font-space-grotesk),
+    sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+.principle p {
+  max-width: 240px;
+
+  margin: 0;
+
+  color: #707782;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.aboutCta {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 45px;
+}
+
+.ctaLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  color: #8b919a;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  text-decoration: none;
+
+  transition:
+    color 200ms ease,
+    gap 200ms ease;
+}
+
+.ctaArrow {
+  color: #fff3ae;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  transition:
+    transform 200ms ease;
+}
+
+.ctaLink:hover {
+  color: #f5f5f2;
+
+  gap: 18px;
+}
+
+.ctaLink:hover .ctaArrow {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .section {
+    padding:
+      95px 0;
+  }
+
+  .companyIntro {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    margin-bottom: 55px;
+  }
+
+  .principle {
+    min-height: 180px;
+
+    padding:
+      25px 22px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .section {
+    padding:
+      80px 0 85px;
+  }
+
+  .container {
+    width:
+      calc(100% - 32px);
+  }
+
+  .topLine {
+    margin-bottom: 35px;
+  }
+
+  .heading {
+    font-size:
+      clamp(
+        42px,
+        11vw,
+        55px
+      );
+
+    letter-spacing:
+      -2.5px;
+  }
+
+  .companyText p {
+    font-size: 12px;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+
+  .principle {
+    min-height: auto;
+
+    padding:
+      25px
+      20px
+      28px;
+  }
+
+  .principle + .principle {
+    border-left: none;
+
+    border-top:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.07
+      );
+  }
+
+  .principle > span {
+    margin-bottom: 18px;
+  }
+
+  .principle p {
+    max-width: 100%;
+  }
+
+  .aboutCta {
+    justify-content: flex-start;
+
+    margin-top: 35px;
+  }
+
+  .ctaLink {
+    font-size: 8px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ctaLink,
+  .ctaArrow {
+    transition: none;
+  }
+}

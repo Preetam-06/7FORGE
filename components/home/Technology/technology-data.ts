@@ -1,0 +1,42 @@
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiFramer,
+  SiPython,
+  SiFastapi,
+  SiFlask,
+  SiPostgresql,
+  SiMongodb,
+  SiDocker,
+  SiVercel,
+  SiGit,
+  SiGithub,
+  SiFigma,
+  SiNodedotjs,
+} from "react-icons/si";
+
+import { TbApi, TbCloudUpload, TbBrandOpenai, TbMail } from "react-icons/tb";
+
+export const technology = [
+  { id: "01", name: "Next.js", category: "FRONTEND", icon: SiNextdotjs },
+  { id: "02", name: "React", category: "FRONTEND", icon: SiReact },
+  { id: "03", name: "TypeScript", category: "FRONTEND", icon: SiTypescript },
+  { id: "04", name: "Framer Motion", category: "FRONTEND", icon: SiFramer },
+  { id: "05", name: "Python", category: "BACKEND", icon: SiPython },
+  { id: "06", name: "FastAPI", category: "BACKEND", icon: SiFastapi },
+  { id: "07", name: "Flask", category: "BACKEND", icon: SiFlask },
+  { id: "08", name: "Node.js", category: "BACKEND", icon: SiNodedotjs },
+  { id: "09", name: "PostgreSQL", category: "DATABASE", icon: SiPostgresql },
+  { id: "10", name: "MongoDB", category: "DATABASE", icon: SiMongodb },
+  { id: "11", name: "REST API", category: "INTEGRATION", icon: TbApi },
+  { id: "12", name: "Email Automation", category: "AUTOMATION", icon: TbMail },
+  { id: "13", name: "AI Integration", category: "AI", icon: TbBrandOpenai },
+  { id: "14", name: "Docker", category: "DEPLOYMENT", icon: SiDocker },
+  { id: "15", name: "Vercel", category: "DEPLOYMENT", icon: SiVercel },
+  { id: "16", name: "Render", category: "DEPLOYMENT", icon: TbCloudUpload },
+  { id: "17", name: "Git", category: "TOOLS", icon: SiGit },
+  { id: "18", name: "GitHub", category: "TOOLS", icon: SiGithub },
+  { id: "19", name: "Figma", category: "DESIGN", icon: SiFigma },
+  { id: "20", name: "API Integration", category: "INTEGRATION", icon: TbApi },
+];

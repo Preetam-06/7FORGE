@@ -1,0 +1,287 @@
+.hero {
+  position: relative;
+  margin-top: 0;
+  min-height: 820px;
+  width: 100%;
+  overflow: hidden;
+  background: #000000;
+}
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+.container {
+  position: relative;
+  z-index: 5;
+  width: min(1250px, calc(100% - 64px));
+  min-height: 820px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+}
+
+/* =========================================
+   LEFT TEXT
+   ========================================= */
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+  padding-top: 50px;
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  color: var(--forge-ivory);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(52px, 6vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 600;
+  color: #f5f5f2;
+}
+
+.headingLine {
+  display: block;
+  white-space: nowrap;
+}
+
+.headingAccent {
+  display: block;
+  color: var(--forge-ivory);
+}
+
+.description {
+  max-width: 510px;
+  margin: 28px 0 0;
+  color: #a9adb5;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 48px;
+  padding: 0 21px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition: transform 200ms ease, background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.primaryButton {
+  background: var(--forge-ivory);
+  color: #101318;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  background: #fff7c9;
+}
+
+.secondaryButton {
+  border: 1px solid #2b3038;
+  color: #f5f5f2;
+  background: transparent;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 243, 174, 0.45);
+  color: var(--forge-ivory);
+}
+
+/* =========================================
+   LOGO AREA
+   ========================================= */
+.logoArea {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(30px);
+}
+
+.logo {
+  position: relative;
+  z-index: 4;
+  width: min(420px, 75%);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 25px rgba(255, 243, 174, 0.18));
+  animation: logoFloat 6s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* =========================================
+   LOGO GLOW (FIXED TO ABSOLUTE)
+   ========================================= */
+.logoGlow {
+  position: absolute; /* Fixed breaking screen alignment */
+  z-index: 1;
+  width: 780px;
+  height: 780px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 197, 92, 0.15), rgba(244, 197, 92, 0.03) 40%, transparent 70%);
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+/* =========================================
+   BACKGROUND GLOW
+   ========================================= */
+
+.waves {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.waves svg {
+  position: absolute;
+  width: 180%; /* Stretches the wave across the viewport boundary */
+  height: 250px;
+  bottom: -50px;
+  left: -20%;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.waves svg path {
+  stroke-width: 2px;
+}
+
+/* Wave 1: 45 Degrees Rotated */
+.waveOne {
+  transform: rotate(-45deg);
+  opacity: 0.15;
+}
+.waveOne path {
+  stroke: var(--forge-ivory);
+  filter: drop-shadow(0 0 8px rgba(244, 196, 92, 0.625));
+}
+
+/* Wave 2: 35 Degrees Rotated */
+.waveTwo {
+  transform: rotate(-35deg);
+  bottom: -80px;
+  opacity: 0.35;
+}
+.waveTwo path {
+  stroke: var(--forge-ivory);
+  filter: drop-shadow(0 0 12px rgba(216, 158, 31, 0.816));
+}
+
+/* Wave 3: 25 Degrees Rotated */
+.waveThree {
+  transform: rotate(-25deg);
+  bottom: -110px;
+  opacity: 0.65;
+}
+.waveThree path {
+  stroke: var(--forge-ivory);
+  stroke-width: 3px; /* Slightly thicker foreground line */
+  filter: drop-shadow(0 0 16px rgba(244, 197, 92, 0.6));
+}
+
+/* Responsive adjustments to keep rotations clean on small viewports */
+@media (max-width: 900px) {
+
+  .waveOne { transform: rotate(-35deg);}
+  .waveTwo { transform: rotate(-25deg);}
+  .waveThree { transform: rotate(-15deg); }
+}
+
+@media(max-width: 600px) {
+  .waveOne { transform: rotate(-25deg); visibility: hidden;}
+  .waveTwo { transform: rotate(-15deg); visibility: hidden;}
+  .waveThree { transform: rotate(-5deg); visibility: hidden;}
+}
+/* =========================================
+   SCROLL INDICATOR
+   ========================================= */
+.scrollIndicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  color: #a9adb5;
+  text-decoration: none;
+  animation: scrollBounce 2s infinite ease-in-out;
+}
+
+.scrollIndicator span {
+  font-size: 24px;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+   ========================================= */
+@media (max-width: 900px) {
+  .hero { min-height: 760px; margin-top: 100px; }
+  .container { min-height: 760px; grid-template-columns: 1fr; }
+
+  .content { margin: 0 auto; text-align: left; }
+  .description { margin-inline: auto; }
+  .actions { justify-content: left; }
+  .logoArea {
+    visibility: hidden;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 600px) {
+  .hero { max-height: 300px; margin-bottom: -200px; }
+  .container { width: min(100% - 32px, 1250px); max-height: 300px; }
+  .content { padding-top: 20px; }
+  .eyebrow { font-size: 9px; letter-spacing: 3px; }
+  .heading { font-size: clamp(44px, 12vw, 62px); letter-spacing: -2.5px; }
+  .headingLine { white-space: normal; }
+  .description { font-size: 14px; line-height: 1.7; }
+  .actions { flex-direction: column; width: 100%; }
+  .primaryButton, .secondaryButton { width: 100%; }
+  .scrollIndicator { display: hidden; }
+}

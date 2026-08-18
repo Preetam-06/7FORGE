@@ -1,0 +1,416 @@
+.section {
+  position: relative;
+  width: 100%;
+  padding:140px 0;
+
+  overflow: hidden;
+
+  border-top: 1px solid var(--forge-ivory);
+  box-shadow: 0 0 20px rgba(209, 180, 113, 0.633);
+
+  color: #f5f5f2;
+}
+
+
+.container {
+  position: relative;
+  z-index: 5; /* Keeps all cards above background waves */
+  width: min(1400px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+.headingArea {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #fff3ae;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1;
+  letter-spacing: -2.5px;
+  font-weight: 600;
+}
+
+.heading span {
+  display: block;
+  color: #fff3ae;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 22px auto 0;
+  color: #a9adb5;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   CAROUSEL LAYOUT & Z-INDEX STACKING
+   ========================================= */
+.carousel {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerViewport {
+  position: relative;
+  z-index: 10;
+  width: 480px;
+  height: 560px;
+  flex-shrink: 0;
+}
+
+.mainCard {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 243, 174, 0.15);
+  background: radial-gradient(
+      circle at 85% 15%,
+      color-mix(in srgb, var(--card-accent) 15%, transparent),
+      transparent 40%
+    ),
+    linear-gradient(145deg, #1b2027, #0f1216);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.sideCard {
+  position: relative;
+  z-index: 6;
+  width: 370px;
+  height: 480px;
+  flex-shrink: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: radial-gradient(
+      circle at 75% 12%,
+      color-mix(in srgb, var(--card-accent) 10%, transparent),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #161a20, #0c0f13);
+  color: #f5f5f2;
+  cursor: pointer;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  font: inherit;
+  text-align: left;
+}
+
+.prevCard {
+  margin-right: -40px;
+}
+
+.nextCard {
+  margin-left: -40px;
+}
+
+/* =========================================
+   BACKGROUND SINE WAVES LAYER
+   ========================================= */
+.waves {
+  position: absolute;
+  z-index: 1; /* Lowest index inside section */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.waves svg {
+  position: absolute;
+  width: 180%;
+  height: 250px;
+  bottom: -50px;
+  left: -20%;
+  transform-origin: bottom left;
+}
+
+.waveOne {
+  transform: rotate(-45deg);
+  opacity: 0.15;
+}
+.waveOne path {
+  stroke: var(--forge-ivory, #fff3ae);
+  filter: drop-shadow(0 0 8px rgba(244, 196, 92, 0.6));
+}
+
+.waveTwo {
+  transform: rotate(-35deg);
+  bottom: -80px;
+  opacity: 0.35;
+}
+.waveTwo path {
+  stroke: var(--forge-ivory, #fff3ae);
+  filter: drop-shadow(0 0 12px rgba(216, 158, 31, 0.8));
+}
+
+.waveThree {
+  transform: rotate(-25deg);
+  bottom: -110px;
+  opacity: 0.65;
+}
+.waveThree path {
+  stroke: var(--forge-ivory, #fff3ae);
+  stroke-width: 2.5px;
+  filter: drop-shadow(0 0 16px rgba(244, 197, 92, 0.6));
+}
+
+/* =========================================
+   CARD INNER & TYPOGRAPHY
+   ========================================= */
+.cardInner,
+.sideInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.sideInner {
+  padding: 28px;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardNumber {
+  color: var(--card-accent);
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.cardType {
+  color: #626975;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.cardBody h3 {
+  margin: 16px 0 0;
+  color: #f5f5f2;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 1;
+  letter-spacing: -2px;
+  font-weight: 600;
+}
+
+.cardBody p {
+  margin: 14px 0 0; /* Keep top margin clean and bottom margin at 0 */
+  color: #a9adb5;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sideInner .cardBody h3 {
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+
+.sideInner .cardBody p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px; /* Pushes detail items right above footer */
+  padding-bottom: 16px;
+}
+
+.detail {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.detail span {
+  flex-shrink: 0;
+  color: var(--card-accent);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.detail p {
+  margin: 0;
+  color: #c6c9ce;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #69707a;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.accentDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--card-accent);
+  box-shadow: 0 0 10px var(--card-accent);
+}
+
+.autoHint {
+  margin: 24px 0 0;
+  color: #555c66;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================= */
+@media (max-width: 1050px) {
+  .centerViewport {
+    width: 420px;
+    height: 520px;
+  }
+  .sideCard {
+    width: 240px;
+    height: 440px;
+  }
+  .prevCard { margin-right: -60px; }
+  .nextCard { margin-left: -60px; }
+}
+
+@media (max-width: 800px) {
+  .carousel {
+    min-height: 480px;
+  }
+  .centerViewport {
+    width: 100%;
+    height: 500px;
+  }
+  .sideCard {
+    display: none; /* Mobile switches to full single-card focus */
+  }
+  .waves svg {
+    opacity: 0.15;
+  }
+}
+/* =========================================
+   SECTION CTA
+========================================= */
+
+.sectionCta {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 45px;
+}
+
+.ctaLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  color: #8b919a;
+
+  font-family:
+    var(--font-inter),
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  text-decoration: none;
+
+  transition:
+    color 200ms ease,
+    gap 200ms ease;
+}
+
+.ctaArrow {
+  color: #fff3ae;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  transition:
+    transform 200ms ease;
+}
+
+.ctaLink:hover {
+  color: #f5f5f2;
+  gap: 18px;
+}
+
+.ctaLink:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .sectionCta {
+    margin-top: 35px;
+  }
+
+  .ctaLink {
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ctaLink,
+  .ctaArrow {
+    transition: none;
+  }
+}
