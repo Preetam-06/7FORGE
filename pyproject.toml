@@ -1,0 +1,17 @@
+[project]
+name = "7forge-api"
+version = "1.0.0"
+requires-python = "==3.12.*"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+    "pydantic",
+    "pydantic-settings",
+    "psycopg2-binary",
+    "PyJWT",
+    "bcrypt",
+    "email-validator",
+    "aiosmtplib",
+    "alembic"
+]
