@@ -395,6 +395,7 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: start;
+  visibility: visible;
 }
 
 .about-copy p {
