@@ -191,7 +191,7 @@ export default function Contact() {
 
               /* FORM FIELDS */
 
-              <>
+              <section id="contact-form" className={styles.formFields}>
 
                 <div className={styles.formHeader}>
                   <span>
@@ -348,7 +348,7 @@ export default function Contact() {
                   </button>
                 </div>
 
-              </>
+              </section>
             )}
 
           </motion.form>
