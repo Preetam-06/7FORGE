@@ -10,7 +10,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar-inner">
 
-        <a href="/app" className="brand">
+        <a href="/" className="brand">
           <img 
             src={favicon.src} 
             alt="7FORGE Logo" 

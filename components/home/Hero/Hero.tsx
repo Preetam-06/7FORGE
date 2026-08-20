@@ -36,7 +36,7 @@ export default function Hero() {
             We identify real business problems and engineer practical digital solutions that move businesses forward.
           </p>
           <div className={styles.actions}>
-            <a href="/contact" className={styles.primaryButton}>
+            <a href="/contact#contact-form" className={styles.primaryButton}>
               Start a Project
               <span aria-hidden="true">→</span>
             </a>
