@@ -270,7 +270,7 @@ img {
 
 .page {
   min-height: 100vh;
-  padding-top: 72px;
+  padding-top: 50px;
   overflow-x: hidden;
   background: var(--forge-black);
 }
@@ -282,7 +282,7 @@ img {
 
 .page-hero {
   position: relative;
-  padding: 120px 0 90px;
+  padding: 90px 0 80px;
   border-bottom: 1px solid rgba(240, 207, 136, 0.22);
   overflow: hidden;
 }
@@ -305,7 +305,7 @@ img {
 }
 
 .page-eyebrow {
-  margin: 0 0 18px;
+  margin: 0 0 10px;
   color: var(--forge-ivory);
   font-family: var(--font-inter), sans-serif;
   font-size: 10px;
@@ -340,7 +340,7 @@ img {
 }
 
 .page-section {
-  padding: 110px 0;
+  padding: 65px 0 ;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
@@ -433,8 +433,8 @@ img {
 .principles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 182, 66, 0.249);
+  border-bottom: 1px solid rgba(255, 182, 66, 0.249);
 }
 
 .principle-card {
@@ -443,9 +443,8 @@ img {
 }
 
 .principle-card + .principle-card {
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 182, 66, 0.249);
 }
-
 .principle-number {
   display: block;
   margin-bottom: 42px;
@@ -471,17 +470,17 @@ img {
 .process-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 182, 66, 0.249);
 }
 
 .process-card {
   min-height: 260px;
   padding: 28px 22px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 182, 66, 0.249);
 }
 
 .process-card + .process-card {
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 182, 66, 0.249);
 }
 
 .process-number {
@@ -708,7 +707,7 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .pricing-factor {
@@ -826,11 +825,10 @@ img {
 
 .contact-email {
   display: inline-flex;
-  margin-top: 25px;
+  margin-top: 0px;
   color: var(--forge-ivory);
   font-size: 13px;
-  border-bottom: 1px solid rgba(240, 207, 136, 0.35);
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 
@@ -975,9 +973,9 @@ img {
 
 .founders-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 3fr));
   gap: 14px;
-  max-width: 720px;
+  max-width: 1200px;
 }
 
 .founder-card {
@@ -987,20 +985,21 @@ img {
   min-height: 100px;
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(14, 13, 13, 0.448);
   transition:
     border-color 200ms ease,
     background 200ms ease;
-}
+} 
 
 .founder-card:hover {
   border-color: rgba(240, 207, 136, 0.25);
   background: rgba(240, 207, 136, 0.025);
+  
 }
 
 .founder-photo {
-  width: 72px;
-  height: 72px;
+  width: 82px;
+  height: 82px;
   flex: 0 0 72px;
   display: flex;
   align-items: center;
@@ -1036,12 +1035,21 @@ img {
   display: block;
   margin-bottom: 6px;
   color: var(--forge-ivory);
-  font-size: 7px;
+  font-size: 8px;
   font-weight: 600;
   letter-spacing: 1.8px;
   text-transform: uppercase;
 }
-
+.founder-designation {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--forge-ivory);
+  font-size: 13px;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
 .founder-name {
   margin: 0;
   color: var(--forge-white);

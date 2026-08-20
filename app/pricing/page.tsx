@@ -6,7 +6,7 @@ const pricingOptions = [
   {
     label: "FOR STARTING OUT",
     title: "Website",
-    price: "₹5,000+",
+    price: "₹5 ,000+",
     description:
       "A focused digital presence for individuals, startups, and small businesses that need a professional website.",
     features: [
@@ -433,7 +433,7 @@ export default function PricingPage() {
             </p>
 
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="page-button"
             >
               Get a Project Estimate

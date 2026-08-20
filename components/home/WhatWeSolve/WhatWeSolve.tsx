@@ -68,6 +68,7 @@ export default function WhatWeSolve() {
           {/* LEFT — PROBLEM CARD */}
 
           <div className={styles.cardViewport}>
+            
             <AnimatePresence
               mode="wait"
               initial={false}
@@ -104,6 +105,7 @@ export default function WhatWeSolve() {
                   ],
                 }}
               >
+                <img className={styles.problemImage} src={activeProblem.image} alt={activeProblem.title} />
                 <span className={styles.number}>
                   {activeProblem.id}
                 </span>

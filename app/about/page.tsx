@@ -50,17 +50,27 @@ const process = [
 
 const founders = [
   {
-    name: "FOUNDER NAME",
-    role: "Founder & Developer",
-    image: "",
+    name: "Preetam Prajapati",
+    designation: "Founder",
+    role: "System Designing | UI/UX | DevOps",
+    image: "/about/default.png",
     placeholder: "F",
   },
   {
-    name: "CO-FOUNDER NAME",
-    role: "Co-Founder",
-    image: "",
+    name: "Piyush Dubey",
+    designation: "Co-Founder",
+    role: "UI/UX | Frontend Development | Marketing",
+    image: "/about/default.png",
     placeholder: "C",
   },
+  {
+    name: "Mayur Baisane",
+    designation: "Developer",
+    role: "Backend | Frontend Development",
+    image: "/about/default.png",
+    placeholder: "D",
+  },
+
 ];
 
 export default function AboutPage() {
@@ -206,9 +216,12 @@ export default function AboutPage() {
 
 
                   <div className="founder-info">
-
+                    <span className="founder-designation">
+                      {person.designation}
+                    </span>
                     <span className="founder-role">
                       {person.role}
+
                     </span>
 
                     <h3 className="founder-name">
@@ -344,7 +357,7 @@ export default function AboutPage() {
             </p>
 
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="page-button"
             >
               Start a Project

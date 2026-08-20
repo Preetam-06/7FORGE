@@ -207,7 +207,7 @@ export default function SolutionsPage() {
             </p>
 
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="page-button"
             >
               Discuss Your Project

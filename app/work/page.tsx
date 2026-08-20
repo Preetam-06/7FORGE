@@ -12,22 +12,7 @@ export default function WorkPage() {
       <main className="page">
 
         {/* HERO */}
-        <section className="page-hero">
-          <div className="page-container">
-            <p className="page-eyebrow">
-              SELECTED WORK
-            </p>
-            <h1 className="page-title">
-              Ideas brought <span>to life.</span>
-            </h1>
-            <p className="page-intro">
-              A showcase of concepts, digital experiences,
-              applications, and systems explored through
-              7Forge.
-            </p>
-          </div>
-        </section>
-
+        
         {/* PROJECTS */}
         <section className="page-section">
           <div className="page-container">
@@ -54,10 +39,14 @@ export default function WorkPage() {
                   key={project.id}
                   className="work-card-page"
                 >
-                  <div className="work-visual">
-                    <span className="work-visual-number">
-                      {project.id}
-                    </span>
+                
+                  <div className="work-visual-image">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      width={540}
+                      height={540}
+                    />
                   </div>
 
                   <div className="work-meta">
