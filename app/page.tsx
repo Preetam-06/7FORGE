@@ -7,10 +7,12 @@ import SelectedWork from "@/components/home/SelectedWork/SelectedWork";
 import About from "@/components/home/About/About";
 import Footer from "@/components/layout/Footer";
 import HomeCTA from "@/components/home/HomeCTA/HomeCTA";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   return (
     <main className="site-shell">
+      <Analytics />
       <Navbar />
 
       <Hero />
